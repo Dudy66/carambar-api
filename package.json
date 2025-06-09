@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-"scripts": {
-  "start": "node server.js",
-  "migrate": "npx sequelize-cli db:migrate",
-  "seed": "npx sequelize-cli db:seed:all",
-  "postinstall": "npm rebuild sqlite3 --build-from-source"
-},
+  "scripts": {
+    "start": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all && node server.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npx sequelize-cli db:seed:all",
+    "postinstall": "npm rebuild sqlite3 --build-from-source"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
